@@ -49,7 +49,7 @@ let addToCart = (option, quantity) => {
 
 
 //Aca voy a convertir el JSON de spares. 
-let spares = JSON.parse(data); //Ahroa es un array de objetos y ya no es mas un JSON. 
+let spares = JSON.parse(data); //Ahroa es un array de objetos y ya no es mas un JSON. Lo habia convertido en JSON en la pestana de variables (ahi esta data). 
 
 
 //Esta funcion muestra al usuario el total de repuestos que se va a llevar.
@@ -94,4 +94,14 @@ const showCart = () => {
     }
 };
 
+// EVENTS
+document.getElementById("mensajeBienvenida").addEventListener("mouseenter", entrar);
+document.getElementById("mensajeBienvenida").addEventListener("mouseleave", salir);
 
+function entrar() {
+    document.getElementById("mensajeBienvenida").style.backgroundColor = "yellow";
+}
+
+function salir() {
+    document.getElementById("mensajeBienvenida").style.backgroundColor = "white";
+}
